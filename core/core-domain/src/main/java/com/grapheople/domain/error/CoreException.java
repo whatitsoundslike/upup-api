@@ -1,4 +1,4 @@
-package com.grapheople.core.support.error;
+package com.grapheople.domain.error;
 
 import lombok.Getter;
 

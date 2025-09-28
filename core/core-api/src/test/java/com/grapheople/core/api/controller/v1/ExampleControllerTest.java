@@ -14,7 +14,6 @@ import static org.springframework.restdocs.request.RequestDocumentation.paramete
 import static org.springframework.restdocs.request.RequestDocumentation.pathParameters;
 import static org.springframework.restdocs.request.RequestDocumentation.queryParameters;
 
-import com.grapheople.core.api.controller.v1.request.ExampleRequestDto;
 import com.grapheople.core.domain.ExampleResult;
 import com.grapheople.core.domain.ExampleService;
 import com.grapheople.test.api.RestDocsTest;

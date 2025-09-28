@@ -1,7 +1,7 @@
 package com.grapheople.core.support.response;
 
-import com.grapheople.core.support.error.ErrorMessage;
-import com.grapheople.core.support.error.ErrorType;
+import com.grapheople.domain.error.ErrorMessage;
+import com.grapheople.domain.error.ErrorType;
 
 public class ApiResponse<S> {
 

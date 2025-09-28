@@ -1,4 +1,4 @@
-package com.grapheople.core.support.error;
+package com.grapheople.domain.error;
 
 import lombok.Getter;
 import org.springframework.boot.logging.LogLevel;
@@ -8,7 +8,10 @@ import org.springframework.http.HttpStatus;
 public enum ErrorType {
 
     DEFAULT_ERROR(HttpStatus.INTERNAL_SERVER_ERROR, ErrorCode.E500, "An unexpected error has occurred.",
-            LogLevel.ERROR);
+            LogLevel.ERROR),
+    USER_NOT_FOUND(HttpStatus.NOT_FOUND, ErrorCode.NOT_FOUND, "User not found.",
+            LogLevel.WARN)
+    ;
 
     private final HttpStatus status;
     private final ErrorCode code;

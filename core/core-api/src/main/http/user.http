@@ -1,0 +1,12 @@
+### 사용자 조회
+GET {{host}}/api/v1/users/1
+
+### 사용자 생성
+POST {{host}}/api/v1/users
+Content-Type: application/json
+
+{
+  "name": "Test User",
+  "email": "test@gmail.com",
+  "nickname": "Test Nickname"
+}
