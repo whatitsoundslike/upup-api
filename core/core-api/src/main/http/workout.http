@@ -1,0 +1,11 @@
+### 운동 조회
+GET {{host}}/api/v1/workouts/1
+
+### 운동 생성
+POST {{host}}/api/v1/workouts
+Content-Type: application/json
+
+{
+  "name": "Test workout",
+  "workoutType": "CYCLING"
+}

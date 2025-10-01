@@ -11,7 +11,6 @@ rootProject.name = 'upup-api'
 
 include 'core:core-domain'
 include 'core:core-api'
-include 'storage:db-core'
 include 'tests:api-docs'
 include 'support:logging'
 include 'support:monitoring'

@@ -34,9 +34,6 @@ This module shows an example of HTTP communication with `Spring-Cloud-Open-Feign
 ## Storage
 Submodules of this module are responsible for integrating with the various storages.
 
-### storage:db-core
-This module shows an example of connecting to `MySql` using `Spring-Data-JPA`.
-
 <br/>
 
 ## Support
