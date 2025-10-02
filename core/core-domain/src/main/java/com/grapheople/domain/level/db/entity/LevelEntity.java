@@ -1,4 +1,4 @@
-package com.grapheople.domain.template.db.entity;
+package com.grapheople.domain.level.db.entity;
 
 import com.grapheople.domain.common.entity.BaseEntity;
 import jakarta.persistence.Entity;
@@ -7,11 +7,13 @@ import lombok.*;
 
 @EqualsAndHashCode(callSuper = true)
 @Entity
-@Table(name = "example_entities")
+@Table(name = "levels")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class ExampleEntity extends BaseEntity {
-    private String name;
+public class LevelEntity extends BaseEntity {
+    private Long userId;
+    private Integer level;
+    private Long accumulatedExp;
 }
