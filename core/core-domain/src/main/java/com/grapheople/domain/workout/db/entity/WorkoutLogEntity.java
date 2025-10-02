@@ -2,6 +2,7 @@ package com.grapheople.domain.workout.db.entity;
 
 import com.grapheople.domain.common.entity.BaseEntity;
 import com.grapheople.domain.workout.vo.WorkoutLog;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Index;
 import jakarta.persistence.Table;
@@ -22,6 +23,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 public class WorkoutLogEntity extends BaseEntity {
+    @Column(unique = true, nullable = false)
+    private String uuid;
     private Long userId;
     private Long workoutId;
     private String workoutName;
@@ -37,6 +40,7 @@ public class WorkoutLogEntity extends BaseEntity {
 
     public static WorkoutLogEntity from(WorkoutLog workoutLog) {
         return WorkoutLogEntity.builder()
+                .uuid(workoutLog.getUuid())
                 .userId(workoutLog.getUserId())
                 .workoutId(workoutLog.getWorkoutId())
                 .workoutName(workoutLog.getWorkoutName())

@@ -36,6 +36,9 @@ spring.config.activate.on-profile: local-dev
 
 spring:
   jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate:
         format_sql: true
@@ -44,8 +47,8 @@ spring:
 storage:
   datasource:
     core:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://${storage.database.core-db.url}
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://${storage.database.core-db.url}
       username: ${storage.database.core-db.username}
       password: ${storage.database.core-db.password}
       maximum-pool-size: 5
@@ -73,8 +76,8 @@ spring.config.activate.on-profile: dev
 storage:
   datasource:
     core:
-      driver-class-name: com.mysql.cj.jdbc.Driver
-      jdbc-url: jdbc:mysql://${storage.database.core-db.url}
+      driver-class-name: org.postgresql.Driver
+      jdbc-url: jdbc:postgresql://${storage.database.core-db.url}
       username: ${storage.database.core-db.username}
       password: ${storage.database.core-db.password}
       maximum-pool-size: 5

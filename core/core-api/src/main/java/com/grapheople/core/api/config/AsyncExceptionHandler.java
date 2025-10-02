@@ -1,6 +1,6 @@
 package com.grapheople.core.api.config;
 
-import com.grapheople.domain.error.CoreException;
+import com.grapheople.domain.common.error.CoreException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

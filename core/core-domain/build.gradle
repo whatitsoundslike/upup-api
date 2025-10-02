@@ -2,5 +2,6 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     api 'org.springframework.boot:spring-boot-starter-data-jpa'
     runtimeOnly 'com.mysql:mysql-connector-j'
+    runtimeOnly 'org.postgresql:postgresql:42.7.7'
     runtimeOnly 'com.h2database:h2'
 }

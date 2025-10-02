@@ -12,6 +12,7 @@ import java.time.LocalDateTime;
 @Builder
 public class WorkoutLog {
     private Long id;
+    private String uuid;
     private Long userId;
     private Long workoutId;
     private String workoutName;
@@ -28,6 +29,7 @@ public class WorkoutLog {
     public static WorkoutLog of(WorkoutLogEntity workoutLogEntity) {
         return WorkoutLog.builder()
                 .id(workoutLogEntity.getId())
+                .uuid(workoutLogEntity.getUuid())
                 .userId(workoutLogEntity.getUserId())
                 .workoutId(workoutLogEntity.getWorkoutId())
                 .workoutName(workoutLogEntity.getWorkoutName())

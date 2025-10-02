@@ -1,7 +1,7 @@
 package com.grapheople.core.api.controller;
 
-import com.grapheople.domain.error.CoreException;
-import com.grapheople.domain.error.ErrorType;
+import com.grapheople.domain.common.error.CoreException;
+import com.grapheople.domain.common.error.ErrorType;
 import com.grapheople.core.support.response.ApiResponse;
 
 import org.slf4j.Logger;

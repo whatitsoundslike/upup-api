@@ -6,7 +6,13 @@ POST {{host}}/api/v1/users
 Content-Type: application/json
 
 {
-  "name": "Test User",
-  "email": "test@gmail.com",
-  "nickname": "Test Nickname"
+  "name": "Pax",
+  "nickname": "Paxxxxx",
+  "email": "pax@example.com",
+  "birthDate": "1990-05-14",
+  "gender": "MALE",
+  "country": "REPUBLIC_OF_KOREA",
+  "socialLoginProvider": "GOOGLE",
+  "socialLoginProviderId": "1234567890",
+  "role": "USER"
 }

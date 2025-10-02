@@ -1,0 +1,2 @@
+### 데이터 셋업
+GET {{host}}/api/v1/test/setup
