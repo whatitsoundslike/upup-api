@@ -1,4 +1,4 @@
-package com.grapheople.core.api.controller.v1.request;
+package com.grapheople.api.controller.v1.request;
 
 import com.grapheople.domain.user.enums.Country;
 import com.grapheople.domain.user.enums.Gender;

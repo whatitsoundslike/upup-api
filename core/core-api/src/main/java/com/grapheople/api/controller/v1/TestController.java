@@ -1,14 +1,11 @@
-package com.grapheople.core.api.controller.v1;
+package com.grapheople.api.controller.v1;
 
-import com.grapheople.core.api.controller.v1.request.UserRequest;
 import com.grapheople.domain.user.db.service.UserDBService;
 import com.grapheople.domain.user.enums.Gender;
 import com.grapheople.domain.user.enums.Country;
 import com.grapheople.domain.user.enums.SocialLoginProvider;
-import com.grapheople.domain.user.service.UserService;
 import com.grapheople.domain.user.vo.User;
 import com.grapheople.domain.workout.db.service.WorkoutDBService;
-import com.grapheople.domain.workout.service.WorkoutService;
 import com.grapheople.domain.workout.enums.WorkoutType;
 import com.grapheople.domain.workout.vo.Workout;
 import lombok.RequiredArgsConstructor;

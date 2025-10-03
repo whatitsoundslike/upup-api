@@ -1,4 +1,4 @@
-package com.grapheople.core.support.response;
+package com.grapheople.api.support.response;
 
 import com.grapheople.domain.common.error.ErrorMessage;
 import com.grapheople.domain.common.error.ErrorType;

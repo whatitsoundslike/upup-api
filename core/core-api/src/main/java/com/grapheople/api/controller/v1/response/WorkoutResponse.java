@@ -1,4 +1,4 @@
-package com.grapheople.core.api.controller.v1.response;
+package com.grapheople.api.controller.v1.response;
 
 
 import com.grapheople.domain.workout.enums.WorkoutType;

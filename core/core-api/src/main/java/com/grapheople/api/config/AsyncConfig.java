@@ -1,4 +1,4 @@
-package com.grapheople.core.api.config;
+package com.grapheople.api.config;
 
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;
 import org.springframework.context.annotation.Bean;

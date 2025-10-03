@@ -1,8 +1,8 @@
-package com.grapheople.core.api.controller;
+package com.grapheople.api.controller;
 
 import com.grapheople.domain.common.error.CoreException;
 import com.grapheople.domain.common.error.ErrorType;
-import com.grapheople.core.support.response.ApiResponse;
+import com.grapheople.api.support.response.ApiResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

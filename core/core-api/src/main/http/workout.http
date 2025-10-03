@@ -15,13 +15,9 @@ POST {{host}}/api/v1/workout-logs
 Content-Type: application/json
 
 {
-  "uuid": "eeb2f3e5-c252-3f64-9486-c35c6bd9a7e8",
-  "workoutId": 2001,
-  "workoutName": "Cycling Morning Ride",
-  "durationSec": 3600,
-  "distanceMeter": 25000,
-  "calorie": 750,
-  "exp": 120,
+  "uuid": "eeb2f3e5-c252-3f64-9486-c35c6b1d9a7e8",
+  "workoutId": 1,
+  "steps": 22000,
   "exerciseAt": "2025-10-02T06:30:00Z",
   "exerciseDate": "2025-10-02",
   "startAt": "2025-10-02T06:30:00",

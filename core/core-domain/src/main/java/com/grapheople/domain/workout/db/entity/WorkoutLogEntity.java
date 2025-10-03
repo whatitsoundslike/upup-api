@@ -1,6 +1,7 @@
 package com.grapheople.domain.workout.db.entity;
 
 import com.grapheople.domain.common.entity.BaseEntity;
+import com.grapheople.domain.workout.enums.WorkoutType;
 import com.grapheople.domain.workout.vo.WorkoutLog;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -27,7 +28,9 @@ public class WorkoutLogEntity extends BaseEntity {
     private String uuid;
     private Long userId;
     private Long workoutId;
+    private WorkoutType workoutType;
     private String workoutName;
+    private Integer steps;
     private Integer durationSec;
     private Integer distanceMeter;
     private Integer calorie;
@@ -43,7 +46,9 @@ public class WorkoutLogEntity extends BaseEntity {
                 .uuid(workoutLog.getUuid())
                 .userId(workoutLog.getUserId())
                 .workoutId(workoutLog.getWorkoutId())
+                .workoutType(workoutLog.getWorkoutType())
                 .workoutName(workoutLog.getWorkoutName())
+                .steps(workoutLog.getSteps())
                 .durationSec(workoutLog.getDurationSec())
                 .distanceMeter(workoutLog.getDistanceMeter())
                 .calorie(workoutLog.getCalorie())

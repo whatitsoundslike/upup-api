@@ -1,10 +1,9 @@
-package com.grapheople.core.api.controller.v1.response;
+package com.grapheople.api.controller.v1.response;
 
 import com.grapheople.domain.level.vo.Level;
 import com.grapheople.domain.user.enums.Country;
 import com.grapheople.domain.user.enums.Gender;
 import com.grapheople.domain.user.enums.SocialLoginProvider;
-import com.grapheople.domain.user.enums.UserRole;
 import com.grapheople.domain.user.vo.User;
 import lombok.Builder;
 

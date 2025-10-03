@@ -1,6 +1,7 @@
 package com.grapheople.domain.workout.vo;
 
 import com.grapheople.domain.workout.db.entity.WorkoutLogEntity;
+import com.grapheople.domain.workout.enums.WorkoutType;
 import lombok.Builder;
 import lombok.Data;
 
@@ -15,7 +16,9 @@ public class WorkoutLog {
     private String uuid;
     private Long userId;
     private Long workoutId;
+    private WorkoutType workoutType;
     private String workoutName;
+    private Integer steps;
     private Integer durationSec;
     private Integer distanceMeter;
     private Integer calorie;
@@ -32,7 +35,9 @@ public class WorkoutLog {
                 .uuid(workoutLogEntity.getUuid())
                 .userId(workoutLogEntity.getUserId())
                 .workoutId(workoutLogEntity.getWorkoutId())
+                .workoutType(workoutLogEntity.getWorkoutType())
                 .workoutName(workoutLogEntity.getWorkoutName())
+                .steps(workoutLogEntity.getSteps())
                 .durationSec(workoutLogEntity.getDurationSec())
                 .distanceMeter(workoutLogEntity.getDistanceMeter())
                 .calorie(workoutLogEntity.getCalorie())

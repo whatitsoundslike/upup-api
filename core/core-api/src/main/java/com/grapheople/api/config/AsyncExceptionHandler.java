@@ -1,4 +1,4 @@
-package com.grapheople.core.api.config;
+package com.grapheople.api.config;
 
 import com.grapheople.domain.common.error.CoreException;
 

@@ -1,14 +1,12 @@
-package com.grapheople.core.api.controller.v1;
+package com.grapheople.api.controller.v1;
 
-import com.grapheople.core.support.response.ApiResponse;
+import com.grapheople.api.support.response.ApiResponse;
 import com.grapheople.domain.level.db.service.LevelDBService;
-import com.grapheople.domain.level.service.LevelService;
 import com.grapheople.domain.level.vo.Level;
 import com.grapheople.domain.user.db.service.UserDBService;
-import com.grapheople.domain.user.service.UserService;
 import com.grapheople.domain.user.vo.User;
-import com.grapheople.core.api.controller.v1.request.UserRequest;
-import com.grapheople.core.api.controller.v1.response.UserResponse;
+import com.grapheople.api.controller.v1.request.UserRequest;
+import com.grapheople.api.controller.v1.response.UserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

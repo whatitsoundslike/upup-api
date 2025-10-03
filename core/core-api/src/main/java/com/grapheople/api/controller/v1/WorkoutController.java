@@ -1,8 +1,11 @@
-package com.grapheople.core.api.controller.v1;
+package com.grapheople.api.controller.v1;
 
-import com.grapheople.core.api.controller.v1.response.WorkoutResponse;
-import com.grapheople.core.support.response.ApiResponse;
-import com.grapheople.domain.workout.db.repository.WorkoutRepository;
+import com.grapheople.api.support.response.ApiResponse;
+import com.grapheople.domain.level.db.service.ExpLogDBService;
+import com.grapheople.domain.level.enums.ExpGainType;
+import com.grapheople.domain.level.service.LevelService;
+import com.grapheople.domain.level.service.WorkoutLogExpCalculator;
+import com.grapheople.domain.level.vo.ExpEvent;
 import com.grapheople.domain.workout.db.service.WorkoutDBService;
 import com.grapheople.domain.workout.service.WorkoutService;
 import com.grapheople.domain.workout.vo.Workout;
@@ -16,7 +19,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class WorkoutController {
     private final WorkoutDBService workoutDBService;
+    private final ExpLogDBService expLogDBService;
     private final WorkoutService workoutService;
+    private final LevelService levelService;
+    private final WorkoutLogExpCalculator workoutLogExpCalculator;
 
     @GetMapping("/api/v1/workouts/{id}")
     public ApiResponse<Workout> getWorkout(@PathVariable Long id) {
@@ -32,9 +38,13 @@ public class WorkoutController {
 
     @PostMapping("/api/v1/workout-logs")
     public ApiResponse<WorkoutLog> createWorkoutLog(@RequestBody WorkoutLog workoutLog) {
-        Long testUserId = 1L;
-        workoutLog.setUserId(testUserId);
+        Long userId = 1L;
+
+        workoutLog.setUserId(userId);
         WorkoutLog createdWorkoutLog = workoutService.logWorkout(workoutLog);
+        long expGained = workoutLogExpCalculator.calculateExp(new ExpEvent<>(userId, ExpGainType.WORKOUT_COMPLETE, createdWorkoutLog));
+        levelService.addExp(userId, expGained);
+        expLogDBService.save(userId, ExpGainType.WORKOUT_COMPLETE, createdWorkoutLog.getId(), expGained);
         return ApiResponse.success(createdWorkoutLog);
     }
 

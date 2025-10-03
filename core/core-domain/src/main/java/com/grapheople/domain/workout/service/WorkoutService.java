@@ -16,7 +16,11 @@ public class WorkoutService {
     private final WorkoutDBService workoutDBService;
     private final WorkoutLogDBService workoutLogDBService;
 
+
     public WorkoutLog logWorkout(WorkoutLog log) {
+        Workout workout = workoutDBService.findById(log.getWorkoutId());
+        log.setWorkoutType(workout.getWorkoutType());
+        log.setWorkoutName(workout.getName());
         WorkoutLogEntity workoutLogEntity = workoutLogDBService.save(log);
         return WorkoutLog.of(workoutLogEntity);
     }

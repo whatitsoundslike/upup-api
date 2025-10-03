@@ -1,4 +1,4 @@
-package com.grapheople.core.api.controller;
+package com.grapheople.api.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

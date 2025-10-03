@@ -1,4 +1,4 @@
-package com.grapheople.core.support.response;
+package com.grapheople.api.support.response;
 
 public enum ResultType {
 
