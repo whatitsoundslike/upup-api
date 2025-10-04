@@ -59,7 +59,7 @@ storage:
       pool-name: core-db-pool
       data-source-properties:
         socketTimeout: 3000
-        cachePrepStmts: true
+        cachePrepStmts: false
         prepStmtCacheSize: 250
         prepStmtCacheSqlLimit: 2048
         useServerPrepStmts: true

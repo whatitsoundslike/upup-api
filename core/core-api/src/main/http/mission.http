@@ -1,0 +1,15 @@
+### 운동 조회
+GET {{host}}/api/v1/missions/DAILY
+
+### 운동 생성
+POST {{host}}/api/v1/missions
+Content-Type: application/json
+
+{
+  "titleFormat": "걸음수 %d 회 달성하기 ",
+  "goal": 5000,
+  "missionPeriodType": "DAILY",
+  "missionActionType": "COUNT",
+  "missionRewardType": "EXP",
+  "workoutType": "WALKING"
+}
