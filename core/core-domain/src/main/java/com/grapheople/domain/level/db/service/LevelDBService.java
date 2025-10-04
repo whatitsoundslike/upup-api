@@ -16,6 +16,10 @@ public class LevelDBService {
         return Level.from(levelEntity);
     }
 
+    public LevelEntity getOrCreateLevelForUpdate(Long userId) {
+        return levelRepository.findByUserIdForUpdate(userId).orElseGet(() -> create(userId));
+    }
+
     public LevelEntity create(Long userId) {
         LevelEntity levelEntity = LevelEntity.builder()
                 .userId(userId)
@@ -25,11 +29,7 @@ public class LevelDBService {
         return levelRepository.save(levelEntity);
     }
 
-    public Level update(Level level) {
-        LevelEntity levelEntity = levelRepository.findByUserId(level.getUserId())
-                .orElseThrow(() -> new IllegalArgumentException("Level not found for userId: " + level.getUserId()));
-        levelEntity.setLevel(level.getLevel());
-        levelEntity.setAccumulatedExp(level.getAccumulatedExp());
+    public Level save(LevelEntity levelEntity) {
         LevelEntity updatedEntity = levelRepository.save(levelEntity);
         return Level.from(updatedEntity);
     }

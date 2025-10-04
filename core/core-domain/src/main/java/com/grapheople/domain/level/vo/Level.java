@@ -8,12 +8,14 @@ public class Level {
     private Long userId;
     private Integer level;
     private Long accumulatedExp;
+    private Long version;
 
     public static Level from(LevelEntity entity) {
         Level level = new Level();
         level.setUserId(entity.getUserId());
         level.setLevel(entity.getLevel());
         level.setAccumulatedExp(entity.getAccumulatedExp());
+        level.setVersion(entity.getVersion());
         return level;
     }
 }

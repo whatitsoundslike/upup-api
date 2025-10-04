@@ -6,6 +6,7 @@ import com.grapheople.domain.level.enums.ExpGainType;
 import com.grapheople.domain.level.service.LevelService;
 import com.grapheople.domain.level.service.WorkoutLogExpCalculator;
 import com.grapheople.domain.level.vo.ExpEvent;
+import com.grapheople.domain.level.vo.Level;
 import com.grapheople.domain.workout.db.service.WorkoutDBService;
 import com.grapheople.domain.workout.service.WorkoutService;
 import com.grapheople.domain.workout.vo.Workout;
